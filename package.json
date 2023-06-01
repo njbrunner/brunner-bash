@@ -1,7 +1,7 @@
 {
-  "name": "selene-30",
+  "name": "brunner-bash",
   "version": "1.0.0",
-  "description": "Website for Selene's 30th",
+  "description": "Website for Brunner Bash",
   "main": "index.js",
   "scripts": {
     "build": "pug src/index.pug -o deploy && npm run copy:assets",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/njbrunner/selene-30.git"
+    "url": "git+https://github.com/njbrunner/brunner-bash.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/njbrunner/selene-30/issues"
+    "url": "https://github.com/njbrunner/brunner-bash/issues"
   },
-  "homepage": "https://github.com/njbrunner/selene-30#readme",
+  "homepage": "https://github.com/njbrunner/brunner-bash#readme",
   "dependencies": {
     "axios": "^1.2.0",
     "pug": "^3.0.2",
