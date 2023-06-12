@@ -17,7 +17,7 @@ function submitRSVP() {
 
     axios({
       method: "POST",
-      url: "https://us-central1-selene-30.cloudfunctions.net/save-rsvp",
+      url: "https://us-central1-brunnerbash-389603.cloudfunctions.net/save-rsvp ",
       data: data,
     })
       .then((response) => {
