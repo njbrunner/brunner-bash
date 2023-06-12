@@ -6,7 +6,6 @@ function submitRSVP() {
     let lastName = document.getElementById("lastNameInput").value;
     let data = {
       name: `${firstName} ${lastName}`,
-      phone: document.getElementById("phoneInput").value,
       attending: document.querySelector('input[name="rsvp-selection"]:checked')
         .value,
     };
