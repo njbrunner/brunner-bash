@@ -1,7 +1,7 @@
 doctype html
 html.h-100(lang='en')
   head
-    title Selene's 30th Birthday
+    title Brunner Bash
     meta(name="viewport" content="width=device-width, initial-scale=1")
     link(
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -9,7 +9,9 @@ html.h-100(lang='en')
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     )
-    //- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous")
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet")
     link(rel="stylesheet" href="./assets/styles/main.css")
     script(
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -23,42 +25,30 @@ html.h-100(lang='en')
     div.cover-container.d-flex.w-100.h-100.p-3.mx-auto.flex-column
       header.mb-auto
       main
-        div.card.card-main.mx-auto.pt-5
+        div.card.card-main.mx-auto
           div.card-body
-            img.card-img-top.rounded-circle.mx-auto(src="./assets/images/selene.png")
-            h1.title.mt-5 Selene's 30th Birthday
+            //- img.card-img-top.rounded-circle.mx-auto(src="./assets/images/brunner_bash.jpeg")
+            h1.title.summer-font.mt-2 Brunner Bash
+            br
             h5
               i.fa-regular.fa-calendar
-              | &nbsp January 28th, 2023 <br>
-            p
-              i.fa-solid.fa-clock
-              | &nbsp 8:00 PM - 12:00 AM
-            br
-            h5
-              i.fa-solid.fa-circle-exclamation
-              | &nbsp SURPRISE! DON'T TELL SELENE!
+              | &nbsp August 11th - 13th, 2023 <br>
             br
             p.text-start.mx-3
-              i.fa-solid.fa-cake-candles
-              | &nbsp; Selene is turning 30! Let's throw her a private rave!
+              i.fa-solid.fa-umbrella-beach
+              | &nbsp; Come join us for the second annual Brunner Bash!
             p.text-start.mx-3
-              i.fa-solid.fa-location-dot
-              | &nbsp <a class="link-no-styling" href="https://wrightroom.co/" target="_blank">The Wright Room</a> <br>
-              | 535 16th St Mall #240, Denver, CO 80202
+              i.fa-solid.fa-house
+              | &nbsp; <a class="link-no-styling" href="https://wrightroom.co/" target="_blank">Link to house.</a> Pricing TBD. <br>
             p.text-start.mx-3
-              i.fa-solid.fa-car
-              | &nbsp If you're planning to drive, <a class="link-no-styling" href="https://denverpavilions.com/parking/" target="_blank">Pavillions Parking</a> is an underground garage next to the venue. $7 to park until 5:00 AM.
-            p.text-start.mx-3.container-music-player
-              i.fa-solid.fa-headphones
-              | &nbsp DJ Andy Cooper
-              iframe.music-player(width="40%" height="60px" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2Fdjandycoops%2Fedm-march21%2F" frameborder="0")
+              i.fa-solid.fa-sailboat
+              | &nbsp; We'll go boating on Lake Grandby on Saturday! Pricing TBD.
             p.text-start.mx-3
-              i.fa-solid.fa-mask
-              | &nbsp The theme will be Barbie! Think bright colors and Margot Robbie/Ryan Gosling in the new Barbie Movie.
+              i.fa-solid.fa-hamburger
+              | &nbsp; Food will be provided. If you have any dietary restrictions please bring what you need to supplement.
             p.text-start.mx-3
-              i.fa-solid.fa-money-bill
-              | &nbsp Asking everyone to contribute $30 towards the party. This will include appetizers and your first round! If you're coming from out of town or unable to contribute, no worries. Your presence is more important!
-              | Please venmo me: <a class="link-no-styling" href="https://urlgeni.us/venmo/Nick-Brunner" target="_blank">@Nick-Brunner</a>
+              i.fa-solid.fa-martini-glass-empty
+              | &nbsp; We're asking everyone to please bring drinks.
             p.text-start.mx-3
               i.fa-solid.fa-circle-check
               | &nbsp Please RSVP as soon as possible!
@@ -70,7 +60,7 @@ html.h-100(lang='en')
       div.modal-dialog.modal-dialog-centered.modal-lg
         div.modal-content.modal-pink
           div.modal-header.border-bottom-0
-            h1.modal-title.fs-5(id="rsvpModalLabel" tabindex="-1" aria-labelledby="rsvpModalLabel" aria-hidden="true") RSVP to Selene's 30th Birthday
+            h1.modal-title.fs-5(id="rsvpModalLabel" tabindex="-1" aria-labelledby="rsvpModalLabel" aria-hidden="true") RSVP to Brunner Bash
             button.btn-close.btn-close-white(type="button" data-bs-dismiss="modal" aria-label="Close")
           div.modal-body.text-start
             form.needs-validation(id="rsvpForm")
