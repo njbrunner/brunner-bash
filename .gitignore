@@ -1,0 +1,4 @@
+node_modules/
+deploy/
+.vscode
+.DS_Store
