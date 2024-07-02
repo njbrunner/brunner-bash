@@ -35,11 +35,36 @@
       <div class="card card-main mx-auto">
         <div class="card-body">
           <h1 class="title summer-font mt-2">Brunner Bash</h1><br>
-          <h5><i class="fa-regular fa-calendar"></i>&nbsp August 10th - 15th, 2023 <br></h5><br>
+          <h5><i class="fa-regular fa-calendar"></i>&nbsp August 23rd - 26th, 2023 <br></h5><br>
           <p class="text-start mx-3"><i class="fa-solid fa-umbrella-beach"></i>&nbsp; Come join us for the third annual
-            Brunner Bash! The main events will be from the 11th - 13th, but the house requires a five night minimum so
-            everyone is welcome to stay longer and work remotely or just hang out if you'd like.</p>
-          <p class="text-start mx-3"><i class="fa-solid fa-house"></i>&nbsp; <a class="link-no-styling"
+            Brunner Bash! We'd like to collect preferences from everyone to help make a decision on accomodations. More
+            info on details to follow at a later date.</p>
+          <p class="text-start mx-3">Accomodation Options include:</p>
+          <p class="text-start mx-3"><i class="fa-solid fa-campground"></i>
+            &nbsp;<b>Camping</b>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="fa-stack">
+              <i class="fa-solid fa-dollar-sign fa-stack-1x"></i>
+              <i class="fa-solid fa-slash fa-flip-horizontal fa-stack-1x"></i>
+            </span>Free
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-water"></i>&nbsp;&nbsp; Group site along a river.
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-truck-monster"></i>&nbsp;&nbsp; Very rough road,
+            4x4 and clearance needed.
+          </p>
+          <p class="text-start mx-3"><i class="fa-solid fa-house"></i>
+            &nbsp;<b>Cabin Rental</b>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-dollar-sign"></i>&nbsp;&nbsp; $200 - $300
+            per person.
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-water-ladder"></i>&nbsp; May have a pool.
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-water"></i>&nbsp; If no pool, we'll likely plan a
+            river float.
+          </p>
+          <!-- <p class="text-start mx-3"><i class="fa-solid fa-house"></i>&nbsp; <a class="link-no-styling"
               href="https://www.airbnb.com/rooms/773989?adults=12&location=Grand%20Lake%2C%20Colorado%2C%20United%20States&pets=2&check_in=2023-08-10&check_out=2023-08-15&federated_search_id=3105ddf5-01c4-42bb-8a3a-337134d25fc7&source_impression_id=p3_1684272698_6fEsskDj9mU6%2FnnB&guests=1"
               target="_blank">Airbnb</a> <br>
             Pricing: $204 per person. <br></p>
@@ -65,7 +90,11 @@
                 fill="#ffffff"></path>
             </svg>&nbsp; Please venmo Nick: <a class="link-no-styling"
               href="https://urlgeni.us/venmo/Nick-Brunner"
-              target="_blank">@Nick-Brunner</a></p>
+              target="_blank">@Nick-Brunner</a></p> -->
+          <button type="button"
+            class="btn btn-colored my-3"
+            data-bs-toggle="modal"
+            data-bs-target="#rsvpModal">RSVP</button>
         </div>
       </div>
     </main>
@@ -77,7 +106,7 @@
     aria-labelledby="rsvpModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content modal-pink">
+      <div class="modal-content modal-colored">
         <div class="modal-header border-bottom-0">
           <h1 class="modal-title fs-5"
             id="rsvpModalLabel"
@@ -91,24 +120,30 @@
         <div class="modal-body text-start">
           <form class="needs-validation"
             id="rsvpForm">
-            <div class="row">
-              <div class="col form-floating mb-3"><input class="form-control needs-validation input-pink"
-                  id="firstNameInput"
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  required><label class="ms-3 label-pink"
-                  for="firstNameInput">First Name</label>
-                <div class="invalid-feedback feedback-white">Please provide your first name.</div>
-              </div>
-              <div class="col form-floating mb-3"><input class="form-control needs-validation input-pink"
-                  id="lastNameInput"
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  required><label class="ms-3 label-pink"
-                  for="lastNameInput">Last Name</label>
-                <div class="invalid-feedback feedback-white">Please provide your last name</div>
+            <div id="nameContainer">
+              <div class="row">
+                <div class="col-sm form-floating mb-3"><input class="form-control needs-validation input-colored"
+                    id="firstNameInput"
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    required><label class="ms-3 label-colored"
+                    for="firstNameInput">First Name</label>
+                  <div class="invalid-feedback feedback-white">Please provide your first name.</div>
+                </div>
+                <div class="col-sm form-floating mb-3"><input class="form-control needs-validation input-colored"
+                    id="lastNameInput"
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    required><label class="ms-3 label-colored"
+                    for="lastNameInput">Last Name</label>
+                  <div class="invalid-feedback feedback-white">Please provide your last name</div>
+                </div>
+                <!-- <div class="col-sm-1 form-floating mb-3">
+                  <button class="btn btn-outline-light btn-colored form-control py-3"
+                    onclick="addGuest()"><i class="fa-solid fa-plus"></i></button>
+                </div> -->
               </div>
             </div>
             <div class="mb-3 row">
@@ -118,7 +153,8 @@
                   id="attendInput"
                   autocomplete="off"
                   value="true"
-                  required><label class="btn btn-pink"
+                  onchange="addAccomodationSelection()"
+                  required><label class="btn btn-colored"
                   for="attendInput">Will Attend</label></div>
               <div class="col text-start"><input class="btn-check form-check"
                   type="radio"
@@ -126,14 +162,17 @@
                   id="notAttendInput"
                   autocomplete="off"
                   value="false"
-                  required><label class="btn btn-pink"
+                  onchange="addAccomodationSelection()"
+                  required><label class="btn btn-colored"
                   for="notAttendInput">Will Not Attend</label>
                 <div class="invalid-feedback feedback-white">Please select one of the options.</div>
               </div>
             </div>
+            <div class="mb-3 row"
+              id="accomodationSelection"></div>
           </form>
         </div>
-        <div class="modal-footer border-top-0 text-end"><button class="btn btn-pink"
+        <div class="modal-footer border-top-0 text-end"><button class="btn btn-colored"
             id="submitButton"
             type="button"
             onclick="submitRSVP()">Submit</button></div>
@@ -141,7 +180,7 @@
     </div>
   </div>
   <div class="toast-container position-fixed top-0 end-0 p-3">
-    <div class="toast align-items-center border-0 toast-pink"
+    <div class="toast align-items-center border-0 toast-colored"
       role="alert"
       id="toast"
       aria-live="assertive"
