@@ -90,7 +90,9 @@ function addAccomodationSelection() {
     let campingSelection = document.createElement("div");
     campingSelection.classList.add("col", "text-end");
     let cabinSelection = document.createElement("div");
-    cabinSelection.classList.add("col", "text-start");
+    cabinSelection.classList.add("col", "text-center");
+    let eitherSelection = document.createElement("div");
+    eitherSelection.classList.add("col", "text-start");
     campingSelection.innerHTML = `
       <input class="btn-check form-check"
         type="radio"
@@ -109,8 +111,18 @@ function addAccomodationSelection() {
           value="cabin"
           required>
         <label class="btn btn-colored" for="cabinInput">Cabin</label>`;
+    eitherSelection.innerHTML = `
+        <input class="btn-check form-check"
+          type="radio"
+          name="accomodation-selection"
+          id="eitherInput"
+          autocomplete="off"
+          value="either"
+          required>
+        <label class="btn btn-colored" for="eitherInput">Either</label>`;
     accomodationSelectionSection.appendChild(campingSelection);
     accomodationSelectionSection.appendChild(cabinSelection);
+    accomodationSelectionSection.appendChild(eitherSelection);
   } else {
     accomodationSelectionSection.innerHTML = "";
   }
@@ -148,5 +160,5 @@ function addGuest() {
 }
 
 function removeGuest() {
-  
+
 }
